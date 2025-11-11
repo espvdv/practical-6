@@ -1,6 +1,6 @@
 # Практичне завдання 6: Code Review, Unit-тестування, документація API
 
-![Node.js CI](https://github.com/espvdv/practical-6/actions/workflows/node.js.yml/badge.svg)
+[![Node.js Tests](https://github.com/espvdv/practical-6/actions/workflows/node.js.yml/badge.svg)](https://github.com/espvdv/practical-6/actions/workflows/node.js.yml)
 
 ## Про проект
 Репозиторій для виконання практичної роботи.
