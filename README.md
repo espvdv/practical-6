@@ -12,4 +12,4 @@
 Тести написані з використанням Jest та запускаються автоматично через GitHub Actions.
 
 ## Документація API
-Swagger документація розташована у [docs/api/swagger.yaml](docs/api/swagger.yaml).
+Swagger документація розташована у [docs/api/swagger.yaml]([docs/api/swagger.yaml](https://github.com/espvdv/practical-6/blob/main/docs/api/swagger.yaml)).
