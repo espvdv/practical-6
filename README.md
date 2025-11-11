@@ -6,7 +6,7 @@
 Репозиторій для виконання практичної роботи.
 
 ## Code Review
-- [Pull Request з кодом для рев'ю]([#](https://github.com/espvdv/practical-6/pull/1)) <!-- Вставте реальне посилання на ваш PR -->
+- [Pull Request з кодом для рев'ю](https://github.com/espvdv/practical-6/pull/1) <!-- Вставте реальне посилання на ваш PR -->
 
 ## Тестування
 Тести написані з використанням Jest та запускаються автоматично через GitHub Actions.
