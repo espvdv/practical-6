@@ -1,0 +1,123 @@
+openapi: 3.0.0
+info:
+  title: User Management API
+  description: API для управління користувачами
+  version: 1.0.0
+  contact:
+    name: API Support
+    email: support@example.com
+
+servers:
+  - url: http://localhost:3000/api
+    description: Development server
+
+paths:
+  /users:
+    get:
+      summary: Отримати список всіх користувачів
+      description: Повертає масив всіх зареєстрованих користувачів
+      responses:
+        '200':
+          description: Успішне отримання списку користувачів
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: 
+        '500':
+          description: Помилка сервера
+    
+    post:
+      summary: Створити нового користувача
+      description: Додає нового користувача до системи
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: 
+      responses:
+        '201':
+          description: Користувач успішно створений
+          content:
+            application/json:
+              schema:
+                $ref: 
+        '400':
+          description: Неправильні вхідні дані
+
+  /users/{id}:
+    get:
+      summary: Отримати користувача за ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID користувача
+          schema:
+            type: integer
+            example: 1
+      responses:
+        '200':
+          description: Користувач знайдений
+          content:
+            application/json:
+              schema:
+                $ref: 
+        '404':
+          description: Користувач не знайдений
+    
+    delete:
+      summary: Видалити користувача
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID користувача для видалення
+          schema:
+            type: integer
+      responses:
+        '204':
+          description: Користувач успішно видалений
+        '404':
+          description: Користувач не знайдений
+
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: Унікальний ідентифікатор користувача
+          example: 1
+        name:
+          type: string
+          description: Ім'я користувача
+          example: "Іван Петренко"
+        email:
+          type: string
+          format: email
+          description: Електронна пошта користувача
+          example: "ivan@example.com"
+        createdAt:
+          type: string
+          format: date-time
+          description: Дата створення запису
+    
+    UserInput:
+      type: object
+      required:
+        - name
+        - email
+      properties:
+        name:
+          type: string
+          description: Ім'я користувача
+          example: "Іван Петренко"
+        email:
+          type: string
+          format: email
+          description: Електронна пошта користувача
+          example: "ivan@example.com"
